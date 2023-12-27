@@ -22,3 +22,5 @@ note.md
 
 # Go workspace file
 go.work
+
+dist/
