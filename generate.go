@@ -1,6 +1,7 @@
 package mee
 
 import (
+	_ "embed"
 	"fmt"
 	"math/rand"
 	"time"
@@ -8,28 +9,25 @@ import (
 
 // Generate return <noun><delimiter><adjective>
 func Generate(delimiter string) string {
-	name := fmt.Sprintf("%s%s%s", GetNoun(), delimiter, GetAdj())
+	noun, adj := GetOne("noun"), GetOne("adj")
+	name := fmt.Sprintf("%s%s%s", noun, delimiter, adj)
 	return name
 }
 
-func GetAdj() string {
+func GetOne(wordType string) string {
 	source := rand.NewSource(time.Now().UnixNano())
 	rng := rand.New(source)
-	return AL[rng.Intn(len(AL))]
-}
 
-func GetNoun() string {
-	source := rand.NewSource(time.Now().UnixNano())
-	rng := rand.New(source)
-	return NL[rng.Intn(len(NL))]
-}
+	var word string
 
-func OneWord() string {
-	// this function get 1 random word from wordlist
-	return ""
-}
+	switch wordType {
+	case "noun":
+		return NL[rng.Intn(len(NL))]
+	case "adj":
+		return AL[rng.Intn(len(AL))]
+	case "emoji":
+		return EL[rng.Intn(len(EL))]
+	}
 
-func OneEmoji() string {
-	// this function get 1 random word from wordlist
-	return ""
+	return word
 }
