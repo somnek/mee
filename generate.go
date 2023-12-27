@@ -7,13 +7,15 @@ import (
 	"time"
 )
 
-// Generate return <noun><delimiter><adjective>
+// Generate generates a random name by combining a random adjective and noun with the specified delimiter.
+// The generated name is returned as a string.
 func Generate(delimiter string) string {
 	adj, noun := GetOne("adj"), GetOne("noun")
 	name := fmt.Sprintf("%s%s%s", noun, delimiter, adj)
 	return name
 }
 
+// GetOne returns a random word of the specified type. (noun, adj, emoji)
 func GetOne(wordType string) string {
 	source := rand.NewSource(time.Now().UnixNano())
 	rng := rand.New(source)
