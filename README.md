@@ -24,8 +24,8 @@ import (
 )
 
 func main() {
-  name := mee.Generate("-") // e.g. "noodle-exotic"
+  name := mee.Generate("-") // e.g. "exotic-noodle"
 }
 ```
 
-This will generate random in `noun-adjective` format.
+This will generate random in `adjective-noun` format.

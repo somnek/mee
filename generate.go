@@ -9,7 +9,7 @@ import (
 
 // Generate return <noun><delimiter><adjective>
 func Generate(delimiter string) string {
-	noun, adj := GetOne("noun"), GetOne("adj")
+	adj, noun := GetOne("adj"), GetOne("noun")
 	name := fmt.Sprintf("%s%s%s", noun, delimiter, adj)
 	return name
 }
