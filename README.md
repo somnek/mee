@@ -28,4 +28,4 @@ func main() {
 }
 ```
 
-This will generate random in `adjective-noun` format.
+This will generate random name in `adjective-noun` format.
