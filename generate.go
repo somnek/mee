@@ -10,7 +10,7 @@ import (
 // Generate generates a random name by combining a random adjective and noun with the specified delimiter.
 // The generated name is returned as a string.
 func Generate(delimiter string) string {
-	adj, noun := GetOne("adj"), GetOne("noun")
+	noun, adj := GetOne("noun"), GetOne("adj")
 	name := fmt.Sprintf("%s%s%s", noun, delimiter, adj)
 	return name
 }

@@ -3,7 +3,7 @@ package mee
 var (
 	EL = []string{"🥕", "🍆", "🍅", "🍎", "🍏", "🍐", "🍊", "🍋", "🍌", "🍉", "🍇"}
 
-	NL = []string{
+	AL = []string{
 		"abbreviation",
 		"abdomen",
 		"abnormality",
@@ -1962,7 +1962,8 @@ var (
 		"ziggurat",
 		"zombie",
 	}
-	AL = []string{
+
+	NL = []string{
 		"abandoned",
 		"able",
 		"absolute",
