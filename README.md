@@ -24,7 +24,7 @@ import (
 )
 
 func main() {
-  name := mee.Generate("-") // e.g. "exotic-noodle"
+  name := mee.GenerateWithDelimiter("-") // e.g. "exotic-noodle"
 }
 ```
 
