@@ -7,6 +7,6 @@ import (
 )
 
 func main() {
-	name := mee.Generate("-")
+	name := mee.GenerateWithDelimiter("-")
 	fmt.Println(name)
 }
